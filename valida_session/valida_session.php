@@ -2,18 +2,18 @@
 <?php
 session_start();
  
-//Caso o usuário não esteja autenticado, limpa os dados e redireciona
+//Caso o usuï¿½rio nï¿½o esteja autenticado, limpa os dados e redireciona
 if ( !isset($_SESSION['email']) and !isset($_SESSION['perfil']) and !isset($_SESSION['status'])) {
-    //Limpa sessão
+    //Limpa sessï¿½o
     unset ($_SESSION['email']);
     unset ($_SESSION['perfil']);
 	unset ($_SESSION['status']);
 	
-	//Destrói sessão
+	//Destrï¿½i sessï¿½o
     session_destroy();
  
-    //Redireciona para a página de autenticação
-    header ("Location:index.php");
+    //Redireciona para a pï¿½gina de autenticaï¿½ï¿½o
+    header ("Location:../index.php");
 	die();
 }
 
